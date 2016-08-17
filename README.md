@@ -18,7 +18,7 @@
 	}
 
 	//IP 地址解析
-	DwzResult result = IpAPI.ip("124.193.218.82","ak",null,null);
+	IpResult result = IpAPI.ip("124.193.218.82","ak",null,null);
 	if(result != null && result.isSuccess()){
 		System.out.println(result.getAddress());
 	}
