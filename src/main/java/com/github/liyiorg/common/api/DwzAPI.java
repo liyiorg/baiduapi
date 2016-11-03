@@ -1,19 +1,20 @@
-package com.github.liyiorg.baiduapi.api;
+package com.github.liyiorg.common.api;
 
 import java.io.IOException;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.util.EntityUtils;
 
 import com.alibaba.fastjson.JSON;
-import com.github.liyiorg.baiduapi.result.DwzResult;
+import com.github.liyiorg.common.result.DwzResult;
 
 /**
- * 短网址API
+ * 百度短网址API
  * @author SLYH
  *
  */
@@ -70,8 +71,9 @@ public class DwzAPI extends BaseAPI{
 										.addParameter("tinyurl", tinyurl)
 										.build();
 		try {
-			HttpResponse response = httpClient.execute(httpUriRequest);
+			CloseableHttpResponse response = httpClient.execute(httpUriRequest);
 			String json = EntityUtils.toString(response.getEntity(),"utf-8");
+			response.close();
 			return JSON.parseObject(json, DwzResult.class);
 		} catch (ClientProtocolException e) {
 			e.printStackTrace();

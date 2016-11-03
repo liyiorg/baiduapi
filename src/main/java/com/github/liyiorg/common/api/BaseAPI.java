@@ -1,13 +1,13 @@
-package com.github.liyiorg.baiduapi.api;
+package com.github.liyiorg.common.api;
 
-import org.apache.http.client.HttpClient;
 import org.apache.http.config.SocketConfig;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
 public abstract class BaseAPI {
 
-	protected static HttpClient httpClient;
+	protected static CloseableHttpClient httpClient;
 	
 	static{
 		PoolingHttpClientConnectionManager poolingHttpClientConnectionManager = new PoolingHttpClientConnectionManager();

@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.liyiorg</groupId>
-  <artifactId>baiduapi</artifactId>
-  <version>1.0.0</version>
+  <artifactId>common</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
   
-  	<name>baiduapi</name>
-    <description>baidu dwz java sdk for http://dwz.cn</description>
-    <url>https://github.com/liyiorg/baiduapi</url>
+  	<name>common</name>
+    <description>common code</description>
+    <url>https://github.com/liyiorg/common</url>
 
     <licenses>
         <license>
@@ -23,9 +23,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:liyiorg/baiduapi.git</connection>
-        <developerConnection>scm:git:git@github.com:liyiorg/baiduapi.git</developerConnection>
-        <url>git@github.com:liyiorg/baiduapi.git</url>
+        <connection>scm:git:git@github.com:liyiorg/common.git</connection>
+        <developerConnection>scm:git:git@github.com:liyiorg/common.git</developerConnection>
+        <url>git@github.com:liyiorg/common.git</url>
     </scm>
 	
 	<properties>

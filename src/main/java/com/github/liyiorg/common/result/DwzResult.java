@@ -1,4 +1,4 @@
-package com.github.liyiorg.baiduapi.result;
+package com.github.liyiorg.common.result;
 
 public class DwzResult extends BaseResult {
 

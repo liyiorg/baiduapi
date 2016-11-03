@@ -1,19 +1,19 @@
-package com.github.liyiorg.baiduapi.api;
+package com.github.liyiorg.common.api;
 
 import java.io.IOException;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.util.EntityUtils;
 
 import com.alibaba.fastjson.JSON;
-import com.github.liyiorg.baiduapi.result.IpResult;
+import com.github.liyiorg.common.result.IpResult;
 
 /**
- * IP 地址API
+ * 百度IP 地址API
  * @author SLYH
  *
  */
@@ -41,8 +41,9 @@ public class IpAPI extends BaseAPI{
 										.build();
 		
 		try {
-			HttpResponse response = httpClient.execute(httpUriRequest);
+			CloseableHttpResponse response = httpClient.execute(httpUriRequest);
 			String json = EntityUtils.toString(response.getEntity(),"utf-8");
+			response.close();
 			return JSON.parseObject(json, IpResult.class);
 		} catch (ClientProtocolException e) {
 			e.printStackTrace();
