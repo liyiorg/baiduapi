@@ -17,10 +17,6 @@ import com.github.liyiorg.common.result.Kuaidi;
 /**
  * @author KD
  * @version 1.0
- * 创建时间：2014-09-01 上午09:49:02
- * 最后修改人：
- * 修改时间：
- * 类说明: 快递查询
  *
  *
  快递公司简称
